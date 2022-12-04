@@ -64,6 +64,33 @@ namespace AdventOfCodeTests
 
         }
 
+        [Test]
+        public void ShouldShowCaloriesOfNElvesInventory()
+        {
+            var itemsCalories = @"1000
+                                  2000
+                                  3000
+
+                                  4000
+
+                                  5000
+                                  6000
+
+                                  7000
+                                  8000
+                                  9000
+
+                                  10000";
+
+            var elvesInventory = new ElvesItemsInventory(itemsCalories);
+
+            Assert.AreEqual(45000, elvesInventory.SumOfCaloriesOfNElvesWithBiggestCalories(3));
+
+
+        }
+
+
+
     }
 
     public class ElveInventoryTests

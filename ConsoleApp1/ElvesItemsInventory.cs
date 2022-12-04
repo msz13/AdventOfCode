@@ -19,5 +19,11 @@
             return itemsCalories[elveNumber-1].GetAllCalories();
         }
 
+        public int SumOfCaloriesOfNElvesWithBiggestCalories(int numberOfElves)
+        {
+            return itemsCalories.Select(inventory => inventory.GetAllCalories()).OrderBy(calories => calories).TakeLast(3).Sum();
+        }
+
+
     }      
 }
